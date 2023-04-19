@@ -12,7 +12,8 @@ Este é um teste de construção de uma API básica com uma simples integração
 ### Solução
 
 1 - Com base no descritivo de modelo de dados abaixo, crie um banco de dados relacional contendo as tabelas, chaves e definições necessárias:
-Modelo Pessoa
+
+Modelo Pessoa:
 
 	•	id - inteiro, autoincremento e chave primária
   	•	nome - texto limitado a 255 caracteres e obrigatório
@@ -22,7 +23,9 @@ Modelo Pessoa
 	•	data_nascimento - data e obrigatória
 	•	data_cadastro - data e obrigatória
   	•	data_edicao - data e obrigatória
-	•	Modelo Anotação
+
+Modelo Anotação:
+
 	•	id - inteiro, autoincremento e chave primária
 	•	id_pessoa - inteiro, chave estrangeira é obrigatória
   	•	titulo - texto limitado a 255 caracteres e obrigatório
