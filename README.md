@@ -12,24 +12,26 @@ Este é um teste de construção de uma API básica com uma simples integração
 ### Solução
 
 1 - Com base no descritivo de modelo de dados abaixo, crie um banco de dados relacional contendo as tabelas, chaves e definições necessárias:
-	•	Modelo Pessoa
-  	  •	id - inteiro, autoincremento e chave primária
-  	  •	nome - texto limitado a 255 caracteres e obrigatório
+Modelo Pessoa
+
+	•	id - inteiro, autoincremento e chave primária
+  	•	nome - texto limitado a 255 caracteres e obrigatório
     	•	nome_mae - texto limitado a 255 caracteres e obrigatório
-  	  •	nome_pai - texto limitado a 255 caracteres e opcional
-  	  •	cep - texto limitado a 8 caracteres e obrigatório
+  	•	nome_pai - texto limitado a 255 caracteres e opcional
+  	•	cep - texto limitado a 8 caracteres e obrigatório
     	•	data_nascimento - data e obrigatória
-	    •	data_cadastro - data e obrigatória
-  	  •	data_edicao - data e obrigatória
+	•	data_cadastro - data e obrigatória
+  	•	data_edicao - data e obrigatória
 	•	Modelo Anotação
-	    •	id - inteiro, autoincremento e chave primária
-	    •	id_pessoa - inteiro, chave estrangeira é obrigatória
-  	  •	titulo - texto limitado a 255 caracteres e obrigatório
-	    •	descricao - texto limitado a 2000 caracteres e opcional
-	    •	data_cadastro - data e obrigatória
-  	  •	data_edicao - data e obrigatória
+	•	id - inteiro, autoincremento e chave primária
+	•	id_pessoa - inteiro, chave estrangeira é obrigatória
+  	•	titulo - texto limitado a 255 caracteres e obrigatório
+	•	descricao - texto limitado a 2000 caracteres e opcional
+	•	data_cadastro - data e obrigatória
+	•	data_edicao - data e obrigatória
   
 2 - Crie os endpoints para operações de CRUD para cada modelo considerando:
+
 	•	Os campos data_cadastro e data_edicao devem ser preenchidos automaticamente, sem possibilidade do usuário enviar esses dados no payload do endpoint.
 	•	Os campos data_cadastro devem ser preenchidos automaticamente no insert e não podem mais ser alterados.
 	•	Os campos data_edicao devem ser preenchidos automaticamente em cada update.
@@ -46,6 +48,7 @@ Este é um teste de construção de uma API básica com uma simples integração
     	•	Delete - booleano simbolizando sucesso da operação
       
 3 - Criar nível de proteção por token para a API, considerando:
+
 	• As requisições devem ser feitas com um token no cabeçalho da requisição.
 	• Token precisa ser validado, caso inválido a API deve retornar uma resposta com status 403
   
