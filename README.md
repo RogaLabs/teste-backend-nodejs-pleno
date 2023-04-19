@@ -16,7 +16,7 @@ Modelo Pessoa
 
 	•	id - inteiro, autoincremento e chave primária
   	•	nome - texto limitado a 255 caracteres e obrigatório
-    	•	nome_mae - texto limitado a 255 caracteres e obrigatório
+	•	nome_mae - texto limitado a 255 caracteres e obrigatório
   	•	nome_pai - texto limitado a 255 caracteres e opcional
   	•	cep - texto limitado a 8 caracteres e obrigatório
     	•	data_nascimento - data e obrigatória
@@ -32,20 +32,21 @@ Modelo Pessoa
   
 2 - Crie os endpoints para operações de CRUD para cada modelo considerando:
 
-	•	Os campos data_cadastro e data_edicao devem ser preenchidos automaticamente, sem possibilidade do usuário enviar esses dados no payload do endpoint.
+	•	Os campos data_cadastro e data_edicao devem ser preenchidos automaticamente, sem possibilidade do usuário enviar esses dados no payload do 		   endpoint.
 	•	Os campos data_cadastro devem ser preenchidos automaticamente no insert e não podem mais ser alterados.
 	•	Os campos data_edicao devem ser preenchidos automaticamente em cada update.
-	•	O campo CEP, ao ser persistido no insert ou update, deve ser consultado em uma API externa para ser validado. Caso o CEP não seja válido (não localizados dados na API externa), o resultado dos endpoints de Insert ou Update devem apontar um erro no payload no campo cep e não prosseguir com a operação no banco de dados. Utilize esta API para validar os CEPs: https://viacep.com.br/
-	•	No endpoint de Retrieve, o modelo localizado deve ser completado com dados do endereçamento baseado no CEP persistido. Mais uma vez, consulte o CEP na API acima indicada e adicione um atributo no modelo nomeado de 'endereco' que deve conter a resposta da API de CEP consultada.
-	•	Sobre o status das respostas dos endpoints:
-    	•	200 em caso de sucesso
-	    •	400 em caso de erro de validação no payload
-    	•	404 em caso de registro não localizado
-    	•	500 em caso de erro
-    	•	Sobre o corpo das respostas dos endpoints:
-    	•	Insert e Update - objeto salvo
-    	•	Retrieve - objeto pesquisado
-    	•	Delete - booleano simbolizando sucesso da operação
+	•	O campo CEP, ao ser persistido no insert ou update, deve ser consultado em uma API externa para ser validado. Caso o CEP não seja válido 		 (não localizados dados na API externa), o resultado dos endpoints de Insert ou Update devem apontar um erro no payload no campo cep e não 		   prosseguir com a operação no banco de dados. Utilize esta API para validar os CEPs: https://viacep.com.br/
+	•	No endpoint de Retrieve, o modelo localizado deve ser completado com dados do endereçamento baseado no CEP persistido. Mais uma vez, 			consulte o CEP na API acima indicada e adicione um atributo no modelo nomeado de 'endereco' que deve conter a resposta da API de CEP 			consultada.
+	• Sobre o status das respostas dos endpoints:
+    		•	200 em caso de sucesso
+		•	400 em caso de erro de validação no payload
+  	  	•	404 em caso de registro não localizado
+    		•	500 em caso de erro
+		
+	• Sobre o corpo das respostas dos endpoints:
+	    	•	Insert e Update - objeto salvo
+    		•	Retrieve - objeto pesquisado
+	    	•	Delete - booleano simbolizando sucesso da operação
       
 3 - Criar nível de proteção por token para a API, considerando:
 
